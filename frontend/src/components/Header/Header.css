@@ -1,0 +1,173 @@
+/* styles.css or your style component */
+
+/* Animation for continuously moving gradient background */
+@keyframes moveGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .navbar {
+    background: linear-gradient(45deg, #4ba2cd, #2e907d, rgb(212, 177, 177)); /* Set your desired gradient colors */
+    background-size: 200% 200%; /* Increase the background size to cover the entire navbar */
+    animation: moveGradient 10s linear infinite; /* Adjust animation duration as needed */
+  }
+  
+  /* Other styles for your navbar, such as text color and box-shadow */
+  .navbar-nav .nav-link {
+    color: #fff; /* Set text color to white or any light color */
+  }
+
+  .link{
+    color: #ffffff;
+  }
+  /* Add any additional styling for navbar */
+  
+
+.navbar-nav .nav-link {
+    color: #fff;
+    margin-right: 10px;
+    position: relative;
+    transition: color 0.3s; /* Smooth transition for color change */
+  }
+  .navbar-nav .nav-link,
+.navbar-nav .nav-link.active {
+  color: #fff; /* Set the default text color to white or any light color */
+}
+  
+/* Add animation for continuous gradient color change on hover */
+@keyframes gradientChange {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #319ed4, #de21f3);
+    background-size: 200% 100%;
+    animation: gradientChange 3s linear infinite; /* Adjust animation duration as needed */
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+  }
+  .dropdown-menu {
+    background: linear-gradient(to right, #3b6a81, #2196F3); /* Gradient background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+    padding: 10px; /* Padding */
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+  }
+  
+  /* Styling the dropdown items */
+  .dropdown-item {
+    margin-top: 15px;
+    display: block;
+    padding: 8px 12px; /* Padding for each item */
+    color: #fff; /* Text color */
+    text-decoration: none;
+    transition: background 0.3s; /* Add a smooth transition effect */
+  }
+  
+  
+  /* Optional: Style for the dropdown button or link */
+  .dropdown-item {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  
+  
+  
+  .navbar-nav .nav-link:hover {
+    color: #4CAF50; /* Change the text color on hover */
+  }
+  
+  .navbar-nav .nav-link:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+  .navbar-nav .nav-link {
+    background: linear-gradient(90deg, #4CAF50, #2196F3); /* Gradient background for the active link */
+    border-radius: 10px; /* Adjust border-radius as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Nice shadow border effect */
+    padding: 10px 20px; /* Adjust padding as needed */
+  }
+/* Add animation for continuous gradient color change on hover */
+@keyframes gradientChange {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  /* styling for dropdown list item
+  /* styles.css or your style component */
+
+/* Style for the dropdown menu */
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out; /* Optional fade-in animation */
+  }
+  
+  .dropdown-menu {
+    background-color: #ffffff; /* Background color of the dropdown menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a nice effect */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    padding: 10px; /* Optional: Add padding to the dropdown items */
+  }
+  
+  /* Style for individual dropdown items */
+  .dropdown-item {
+    color: #000000; /* Text color of dropdown items */
+    transition: color 0.3s; /* Smooth color transition on hover */
+  }
+  
+  .dropdown-item:hover {
+    color: #06c00d; /* Change text color on hover */
+  }
+  
+  /* Gradient underline effect on hover */
+  .dropdown-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4CAF50, #2196F3); /* Adjust gradient colors as needed */
+    transition: width 0.3s;
+  }
+  
+  .dropdown-item:hover::after {
+    width: 100%;
+  }
+  
+  /* Optional fade-in animation for the dropdown menu */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

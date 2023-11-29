@@ -1,0 +1,17 @@
+/* styles.css */
+
+.about-us-container {
+    background: radial-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)), url('https://wallpaperboat.com/wp-content/uploads/2019/10/free-website-background-07.jpg') center/cover no-repeat;
+    padding: 80px 0;
+  }
+  
+  .section-heading {
+    font-size: 3rem;
+    color: #007bff;
+  }
+  
+  .text-muted {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
