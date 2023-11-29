@@ -28,7 +28,7 @@ const Header = () => {
               <Link
                 class="nav-link active text-light"
                 aria-current="page"
-                to="/home"
+                to="/"
               >
                 Home
               </Link>
@@ -134,7 +134,7 @@ const Header = () => {
           </ul>
           <ul class="d-flex navbar-nav  mb-2 mb-lg-0 mr-0">
             <li class="nav-item">
-              <Link class="nav-link text-light" to="/blog">
+              <Link class="nav-link text-light" to="/login">
                 SIGN_IN
               </Link>
             </li>

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { json } from "react-router-dom";
+import {toast} from 'react-toastify';
+import axios from "axios";
+
 
 const Signup = () => {
     const [formData, setFormData] = useState({
@@ -12,10 +15,19 @@ const Signup = () => {
       const onChange=(e)=>{
         setFormData({...formData, [e.target.name]: e.target.value})
     }
-    const onSubmit=(e)=>{
+    const onSubmit=async(e)=>{
         e.preventDefault();
-            const data = json.formData;
-            console.log(formData)
+        if(password !== confirmPassword){
+          toast.warning("Your password and confirm password do not match!")
+            }else {
+              try{
+                const data = await axios.post("http://localhost:8000/signUp", formData);
+                //Toast message after successfully submitted
+                toast.success("SignUp successfully");
+              }catch(err){
+                console.log(err)
+              }
+            }
         
         setFormData({
             name:"",
