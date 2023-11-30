@@ -34,7 +34,7 @@ const Login = () => {
       password:""
     })
     
-    toast.success('🦄 Wow so easy!', {
+    toast.success('Login Successfully', {
       position: "bottom-center",
       autoClose: 2000,
       hideProgressBar: false,
@@ -46,7 +46,7 @@ const Login = () => {
       });
     
     setTimeout(()=>{
-    },3000)
+    },4000)
     
     }
     const {email,password}=formData;
