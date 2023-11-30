@@ -1,8 +1,10 @@
 import React from 'react'
 import style from './About.css'
+import Footer from '../Footer/Footer';
 
 const About = () => {
     return (
+      <>
         <div className="about-us-container">
           <div className="container">
             <div className="row">
@@ -24,7 +26,10 @@ const About = () => {
               <i className="bi bi-linkedin mx-2"></i>
               <i className="bi bi-instagram mx-2"></i>
             </div>
+            
         </div>
+        <Footer />
+        </>
       );
 }
 
