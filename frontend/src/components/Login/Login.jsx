@@ -9,10 +9,12 @@ const Login = () => {
         email:"",
         password:""
       })
+      // this is navigation code 
       const navigate=useNavigate();
     const onChange=(e)=>{
     setFormData({...formData,[e.target.name]:e.target.value})
     }
+    // the submit action will perform
     const onSubmit=async(e)=>{
     e.preventDefault();
     try{
