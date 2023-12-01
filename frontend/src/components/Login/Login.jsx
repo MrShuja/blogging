@@ -3,16 +3,19 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import {axios} from 'axios';
 
-
+// this the command 
 const Login = () => {
     const [formData,setFormData]=useState({
         email:"",
         password:""
       })
+      // this is navigation code 
       const navigate=useNavigate();
     const onChange=(e)=>{
     setFormData({...formData,[e.target.name]:e.target.value})
     }
+    // this is also a command
+    // the submit action will perform
     const onSubmit=async(e)=>{
     e.preventDefault();
     try{
@@ -23,6 +26,7 @@ const Login = () => {
     //     navigate("/userDashboard")
     //   }
     //   console.log(data)
+    // cocole the data
     console.log(formData);
     }
     catch(err){
@@ -34,7 +38,7 @@ const Login = () => {
       password:""
     })
     
-    toast.success('🦄 Wow so easy!', {
+    toast.success('Login Successfully', {
       position: "bottom-center",
       autoClose: 2000,
       hideProgressBar: false,
@@ -46,7 +50,7 @@ const Login = () => {
       });
     
     setTimeout(()=>{
-    },3000)
+    },4000)
     
     }
     const {email,password}=formData;
