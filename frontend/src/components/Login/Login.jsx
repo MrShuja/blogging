@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import {axios} from 'axios';
 
-
+// this the command 
 const Login = () => {
     const [formData,setFormData]=useState({
         email:"",
@@ -14,6 +14,7 @@ const Login = () => {
     const onChange=(e)=>{
     setFormData({...formData,[e.target.name]:e.target.value})
     }
+    // this is also a command
     // the submit action will perform
     const onSubmit=async(e)=>{
     e.preventDefault();
