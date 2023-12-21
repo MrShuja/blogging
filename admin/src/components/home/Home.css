@@ -1,0 +1,33 @@
+/* src/components/AdminLandingPage.css */
+.left-section {
+    background: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+    color: #fff;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .left-section .list-group {
+    background-color: transparent; /* Transparent background for the links container */
+    border: none;
+  }
+  
+  .left-section .list-group-item {
+    color: #2c2323;
+    border: none;
+    font-size:larger;
+    cursor: pointer;
+    border-bottom: 2px solid transparent; /* Initially transparent border */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    margin-top: 40px; /* Add some top margin */
+  }
+  
+  .left-section .list-group-item:hover {
+    border-color: #fff; /* Change border color on hover */
+  }
+  
+  .right-section {
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
