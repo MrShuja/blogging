@@ -1,53 +1,8 @@
+/* Add this to your CSS file or component */
+
 body, html {
     height: 100%;
     margin: 0;
     padding: 0;
     /* overflow: hidden; */
-}
-
-.hero-section {
-    position: relative;
-    height: 100vh;
-    background-image: url('https://tse2.mm.bing.net/th?id=OIP.AQiZdU4Kdt-UxGaTL6mjzwHaE8&pid=Api&P=0&h=220'); /* Replace with the path to your image */
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    align-items: center;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the transparency (0.5 means 50% opacity) */
-}
-
-.hero-content {
-    z-index: 1;
-    width: 100%;
-}
-
-.hero-content h1 {
-    font-size: 3em;
-    margin: 0;
-}
-
-.hero-content p {
-    font-size: 1.5em;
-    margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5em;
-    }
-
-    .hero-content p {
-        font-size: 1.2em;
-    }
 }

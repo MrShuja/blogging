@@ -6,7 +6,7 @@ import style from "./Header.css";
 
 const Header = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light text-light sticky-top ">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -20,13 +20,13 @@ const Header = () => {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
-          <Link className="nav-link text-light">
+          <Link className="nav-link text-dark">
             <h3>MR_IT</h3>
           </Link>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 px-5">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 px-5 gap-5">
             <li class="nav-item">
               <Link
-                class="nav-link active text-light"
+                class="nav-link "
                 aria-current="page"
                 to="/"
               >
@@ -34,13 +34,13 @@ const Header = () => {
               </Link>
             </li>
             <li class="nav-item">
-              <Link class="nav-link text-light" to="/blog">
+              <Link class="nav-link " to="/blog">
                 BLOGS
               </Link>
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle text-light"
+                class="nav-link dropdown-toggle"
                 href="#"
                 id="navbarScrollingDropdown"
                 role="button"
@@ -122,24 +122,24 @@ const Header = () => {
               </ul>
             </li>
             <li class="nav-item">
-                  <Link class="nav-link text-light" to="/about">
+                  <Link class="nav-link " to="/about">
                     ABOUT US
                   </Link>
                 </li>
                 <li class="nav-item">
-                  <Link class="nav-link text-light" to="/contact">
+                  <Link class="nav-link " to="/contact">
                     CONTACT
                   </Link>
                 </li>
           </ul>
-          <ul class="d-flex navbar-nav  mb-2 mb-lg-0 mr-0">
+          <ul class="d-flex navbar-nav  mb-2 mb-lg-0 mr-0 gap-3">
             <li class="nav-item">
-              <Link class="nav-link text-light" to="/login">
+              <Link class="nav-link " to="/login">
                 SIGN_IN
               </Link>
             </li>
             <li>
-              <Link class="nav-link text-light" to="/signup">
+              <Link class="nav-link " to="/signup">
                 SIGN_UP
               </Link>
             </li>

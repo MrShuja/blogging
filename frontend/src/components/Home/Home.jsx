@@ -1,15 +1,14 @@
 import React from 'react'
 import style from './Home.css'
-
+import Slider from './Slider/Slider'
+import NewPost from './NewPost/NewPost'
 const Home = () => {
-  
+
   return (
-    <header class="hero-section">
-        <div class="hero-content">
-            <h1>All About IT</h1>
-            <p>I hope you'll find something interesting and useful here.</p>
-        </div>
-    </header>
+    <div>
+      < Slider />
+      <NewPost />
+    </div>
   )
 }
 

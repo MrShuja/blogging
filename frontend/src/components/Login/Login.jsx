@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import {axios} from 'axios';
+import axios from 'axios';
 
 // this the command 
 const Login = () => {
@@ -19,14 +19,14 @@ const Login = () => {
     const onSubmit=async(e)=>{
     e.preventDefault();
     try{
-    //   const data = await axios.post("http://localhost:9998/signup/login",formData)
-    //   const accessToken=localStorage.setItem("accessToken",data.data.token)
-    //   const token = localStorage.getItem("accessToken")
-    //   if(token){
-    //     navigate("/userDashboard")
-    //   }
-    //   console.log(data)
-    // cocole the data
+      const data = await axios.post("http://localhost:8000/signup/login",formData)
+      const accessToken=localStorage.setItem("accessToken",data.data.token)
+      const token = localStorage.getItem("accessToken")
+      if(token){
+        navigate("/dashboard")
+        toast.success("wecome, You are Login to your Dashboard")
+      }
+      console.log(data)
     console.log(formData);
     }
     catch(err){
