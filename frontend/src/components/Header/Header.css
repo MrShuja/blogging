@@ -1,11 +1,15 @@
+.navbar {
+  background-color: #13274F;
+}
 .nav-link{
   position: relative;
   padding: 5px 30px; /* Adjust the padding as needed */
-  background-color: white;
+  /* background-color: white; */
   border-radius: 5%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); Box shadow for a subtle effect */
   text-decoration: none;
-  color: #c83b3b; /* Link text color */
+  color: white !important; /* Link text color */
+  font-size: 18px;
   transition: color 0.3s;
   transition: background-color 0.3s, box-shadow 0.3s; /* Transition effect for a smooth hover effect */
 
@@ -23,7 +27,7 @@
 }
 
 .nav-link:hover {
-  color: #ff8c00; /* Change the color on hover if desired */
+   font-weight: bold !important;
 }
 
 .nav-link:focus {

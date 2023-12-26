@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Container, Row, Col, ListGroup } from 'react-bootstrap';
 import UserManagement from '../userManagement/userManagement';
 import style from './Home.css'
+import AddNewBlog from '../adminControl/AddNewBlog';
 
 const Home = () => {
     const [selectedFolder, setSelectedFolder] = useState(null);
@@ -15,10 +16,10 @@ const Home = () => {
         {/* Left Section */}
         <Col xs={3} className="left-section">
           <ListGroup>
-            <ListGroup.Item className="d-flex text-center">
+            <ListGroup.Item className="admin d-flex text-center ">
                 Admin
             </ListGroup.Item>
-          <ListGroup.Item action onClick={() => handleLinkClick('Add new Block')}>
+          <ListGroup.Item action onClick={() => handleLinkClick(<AddNewBlog />)}>
               Add new Blog
             </ListGroup.Item>
             <ListGroup.Item action onClick={() => handleLinkClick('User Management')}>

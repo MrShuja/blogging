@@ -10,6 +10,8 @@ import Login from './components/Login/Login';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './components/Userdashboard/Dashboard';
+import Blog from './components/blog/BlogList';
+import BlogDetail from './components/blogDetails/BlogDetail';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
     <Header />
     <Routes>
       <Route exact path="/" element={<Home/>}/>
+      <Route  path="/blog" element={<Blog/>}/>
+      <Route  path="/blog/:id" element={<BlogDetail/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/signup' element={<Signup/>}/>
