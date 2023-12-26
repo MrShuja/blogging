@@ -1,0 +1,18 @@
+ul {
+    margin-top: 20px;
+}
+ul li {
+    line-height: 26px;
+}
+ul li :nth-child(1) {
+    font-size: 18px;
+}
+ul li a {
+    color:white !important;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.footer {
+    border-radius: 3%;
+}

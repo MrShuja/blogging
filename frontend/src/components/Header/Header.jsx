@@ -21,7 +21,7 @@ const Header = () => {
         </button>
         <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
           <Link className="nav-link text-dark">
-            <h3>MR_IT</h3>
+            <h3>LogicLens</h3>
           </Link>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 px-5 gap-5">
             <li class="nav-item">

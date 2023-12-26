@@ -4,6 +4,8 @@
     color: #fff;
     height: 100vh;
     overflow-y: auto;
+    margin-top: 40px;
+    padding-top: 20px;
   }
   
   .left-section .list-group {
@@ -18,16 +20,20 @@
     cursor: pointer;
     border-bottom: 2px solid transparent; /* Initially transparent border */
     transition: border-color 0.3s ease; /* Smooth transition for border color */
-    margin-top: 40px; /* Add some top margin */
+    margin-top: 20px; /* Add some top margin */
+    
   }
+  
   
   .left-section .list-group-item:hover {
     border-color: #fff; /* Change border color on hover */
   }
+
   
   .right-section {
     padding: 20px;
     height: 100vh;
     overflow-y: auto;
+    border: solid rgba(0, 0, 0, 0.7) 20px;
   }
   
