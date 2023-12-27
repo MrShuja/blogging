@@ -1,8 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import JoditEditor from 'jodit-react';
 
 const AddNewBlog = () => {
+
+  const editor=useRef(null);
+  const [content,setContent] =useState('')
+
   const initialFormData = {
     title: '',
     content: '',
@@ -90,14 +95,22 @@ const AddNewBlog = () => {
                   <label htmlFor="content" className="form-label">
                     Content
                   </label>
-                  <textarea
+                  {/* <textarea
                     className="form-control"
                     id="content"
                     name="content"
                     value={formData.content}
                     onChange={handleInputChange}
                     required
-                  ></textarea>
+                  ></textarea> */}
+                   <JoditEditor
+		ref={editor} 
+			value={content}
+			// config={config}
+			// tabIndex={1} // tabIndex of textarea
+			// onBlur={newContent => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
+			onChange={newContent => setContent(newContent)}
+		/>
                 </div>
                 <div className="mb-3">
                   <label htmlFor="category" className="form-label">

@@ -1,0 +1,28 @@
+.post-main{
+    padding: 10px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 30px;
+   
+}
+.post img{
+    max-width: 100%;
+    height: 100%;
+
+}
+div.post{
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+.post-text{
+    margin: 0;
+    font-size: 0.6rem;
+    font-size: 15px;
+}
+.post h2{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+  
+}

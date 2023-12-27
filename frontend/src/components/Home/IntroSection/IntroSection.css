@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.intro{
+    display: flex;
+    background-color: white;
+} 
+.text h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 35px;
+    text-decoration: underline;
+}
+.text{
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 5%;
+    font-weight:300;
+    margin-left: 11%;
+   
+}
+.subscribe-section{
+    margin-top: 90px;
+    margin-right: 7%;
+    border: 1px solid gray;
+   height: 300px;
+   border-radius: 7%;
+   align-items: center;
+   justify-content: center;
+   width: 500px;
+}
+.subscribe-section h3{
+    margin-top: 30px;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.subscribe-section p{
+    margin-top: 10px;
+    margin-left: 50px;
+   
+
+}
+button{
+    margin-top: 5%;
+    width: 300px;
+   
+    background-color: black;
+}
+
+
