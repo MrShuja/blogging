@@ -20,37 +20,7 @@ const UserManagement = () => {
   
   return (
     <div>
-      <table class="table table-success table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Title</th>
-      <th scope="col">category</th>
-      <th scope="col">Image</th>
-      <th scope="col">Delete</th>
-      <th scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody>
-    {
-        blogs.map((data)=>{
-            return(
-                <>
-                <tr>
-                <td>{data.title}</td>
-                <td>{data.category}</td>
-                <td>{data.image}</td>
-                <td><button className="btn btn-danger" >Delete</button></td>
-
-                {/* <td><button className="btn btn-danger" onClick={()=>handleDelete(data._id)}>Delete</button></td> */}
-                <td><button className="btn btn-warning">Edit</button></td>
-              </tr>
-              
-              </>
-            )
-        })
-    }
-  </tbody>
-</table>
+     <h1>this is user UserManagement</h1>
     </div>
   )
 }
