@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import React  from 'react'
 import { useParams } from "react-router-dom"
 import axios from 'axios';
@@ -6,6 +6,9 @@ import css from './BlogDetail.css'
 import Footer from "../Footer/Footer";
 
 const BlogDetail = () => {
+
+ 
+
     const [blogDetail, setBlogDetail] = useState({})
     const params = useParams();
     const fetchBlogs = async ()=>{
@@ -56,7 +59,7 @@ const BlogDetail = () => {
         <h1 className="bg-success p-2 text-center">{blogDetail.title}</h1>
       </div>
         <div className="fs-1 text-break mt-5" id="content">
-          <p>{addNewLines(blogDetail.content)}</p>
+       
         </div>
       </div>
     </div>
