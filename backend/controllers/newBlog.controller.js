@@ -44,3 +44,19 @@ export const getSingleBlog = async (req, res) => {
         res.status(500).json({ status: 500, success: false, message: "Internal Server Error" });
     }
 };
+
+export const deleteBlog=async(req,res)=>{
+    try{
+    const {id} = req.params;
+    const deleteBlog = await BlogModel.findOneAndDelete({_id:id});
+    if(!deleteBlog){
+        return res.json({status:404, message:"there is no blog", success:false});
+    }
+    res.json({status:200, message:"blog deleted", success:true, deleteBlog});
+    }
+    catch(err){
+    
+
+    }
+    
+    }

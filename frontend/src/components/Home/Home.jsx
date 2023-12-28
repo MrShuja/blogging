@@ -3,6 +3,7 @@ import style from './Home.css'
 import Slider from './Slider/Slider'
 import NewPost from './NewPost/NewPost';
 import IntroSection from './IntroSection/IntroSection';
+import Footer from '../Footer/Footer'
 
 const Home = () => {
 
@@ -11,6 +12,7 @@ const Home = () => {
       < Slider />
       <NewPost />
       <IntroSection />
+      <Footer />
     </div>
   )
 }

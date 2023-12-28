@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Container, Row, Col, ListGroup } from 'react-bootstrap';
 import style from './Home.css'
 import AddNewBlog from '../adminControl/AddNewBlog';
-import UserManagement from '../userManagement/UserManagement'
+import BlogManagement from '../blogMangement/BlogManagement';
 
 const Home = () => {
     const [selectedFolder, setSelectedFolder] = useState(null);
@@ -22,8 +22,8 @@ const Home = () => {
           <ListGroup.Item action onClick={() => handleLinkClick(<AddNewBlog />)}>
               Add new Blog
             </ListGroup.Item>
-            <ListGroup.Item action onClick={() => handleLinkClick(<UserManagement />)}>
-              User Management
+            <ListGroup.Item action onClick={() => handleLinkClick(<BlogManagement />)}>
+              Bolgs Management
             </ListGroup.Item>
             <ListGroup.Item action onClick={() => handleLinkClick('Content Management')}>
               Content Management
