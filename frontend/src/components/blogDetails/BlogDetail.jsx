@@ -59,7 +59,10 @@ const BlogDetail = () => {
         <h1 className="bg-success p-2 text-center">{blogDetail.title}</h1>
       </div>
         <div className="fs-1 text-break mt-5" id="content">
-       
+ shuja
+          <pre>{blogDetail.content}</pre>
+                            
+ main
         </div>
       </div>
     </div>
