@@ -95,14 +95,14 @@ const AddNewBlog = () => {
                   <label htmlFor="content" className="form-label">
                     Content
                   </label>
-                  {/* <textarea
+                  { <textarea
                     className="form-control"
                     id="content"
                     name="content"
                     value={formData.content}
                     onChange={handleInputChange}
                     required
-                  ></textarea> */}
+                  ></textarea> }
                    <JoditEditor
 		ref={editor} 
 			value={content}

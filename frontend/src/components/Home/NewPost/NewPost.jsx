@@ -16,7 +16,7 @@ const NewPost = () => {
   {/* Ist post */}
 <div className='post'>
   <div className="post-image">
-  <img src={`${process.env.PUBLIC_URL}/assets/image10.jpg`} alt="Car icon" />
+  <img src={`${process.env.PUBLIC_URL}/assets/111.jpg`} alt="marketing image" />
   </div>
 <div className="post-text">
 <h2>Marketing</h2>
@@ -34,10 +34,10 @@ const NewPost = () => {
  {/* 2nd  Post */}
 <div className='post'>
 <div className="post-image">
-  <img src={`${process.env.PUBLIC_URL}/assets/image11.jpg`} alt="Car icon" />
+  <img src={`${process.env.PUBLIC_URL}/assets/web.jpg`} alt="Web image" />
   </div>
   <div className="post-text">
-<h2>Social Media Marketing</h2>
+<h2>Web Development</h2>
 <p className="post-info">
   <a href="" className="author">David paszuko</a><br />
   <time>2023-01-08 16:45</time>
@@ -51,7 +51,7 @@ const NewPost = () => {
  {/* 3nd  Post */}
 <div className='post'>
 <div className="post-image">
-  <img src={`${process.env.PUBLIC_URL}/assets/image12.jpg`} alt="Car icon" />
+  <img src={`${process.env.PUBLIC_URL}/assets/bb.jpg`} alt="Social media" />
   </div>
   <div className="post-text">
 <h2>UI/UX Designing</h2>

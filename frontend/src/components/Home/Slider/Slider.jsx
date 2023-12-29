@@ -7,13 +7,21 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import style from './slider.css'
-
+// import 'swiper/css/bundle';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+// const Slider = () => {
+//   const customArrowStyles = {
+//     color: 'red', // Change the color as needed
+//     fontWeight: 'bold', // Change the font weight as needed
+//     fontSize: '24px', // Add other styles as needed
+//   };
 
 
 const Slider = () => {
   return (
+    
     <div>
        <Swiper
         spaceBetween={30}
@@ -29,12 +37,14 @@ const Slider = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide><img src='https://logoman.ca/wp-content/uploads/2018/01/Slider-Banner-Programming-Image--1024x375.jpg'/></SwiperSlide>
-        <SwiperSlide><img src='https://images.vexels.com/media/users/3/198595/raw/70ea7f8f08f92f962f2e35d1eee74666-online-courses-kids-slider-template.jpg'/></SwiperSlide>
-        <SwiperSlide><img src='http://www.reading-rewards.com/wp-content/uploads/2018/09/slider.jpg'/></SwiperSlide>
-        <SwiperSlide><img src='https://i.ytimg.com/vi/qM0FyW7KZEA/maxresdefault.jpg'/></SwiperSlide>
+        <SwiperSlide><img src={`${process.env.PUBLIC_URL}/assets/1.jpg`} alt="Car icon" /></SwiperSlide>
+        <SwiperSlide><img src={`${process.env.PUBLIC_URL}/assets/2.jpg`} alt="Car icon" /></SwiperSlide>
+        <SwiperSlide><img src={`${process.env.PUBLIC_URL}/assets/3.jpg`} alt="Car icon" /></SwiperSlide>
+        <SwiperSlide><img src={`${process.env.PUBLIC_URL}/assets/4.jpg`} alt="Car icon" /></SwiperSlide>
       </Swiper>
+      
     </div>
+   
   )
 }
 

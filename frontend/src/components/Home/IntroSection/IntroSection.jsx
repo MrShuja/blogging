@@ -37,7 +37,7 @@ const IntroSection = () => {
   
   </div>
   <div class="mx-5 col-sm-10">
-  <button type="submit" class="btn btn-danger">Submit</button></div>
+  <button type="submit" class="btn">Submit</button></div>
         </div>
         </div>
         

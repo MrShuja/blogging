@@ -19,7 +19,7 @@ const Footer = () => {
   return (
     <footer
       className=" text-light p-4 m-3 footer"
-      style={{ background: "#13274F" }}
+      style={{ background: "#4f1340" }}
     >
       <div className="container">
         <div className="row">
