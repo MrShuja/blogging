@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { json } from "react-router-dom";
+import { json, useNavigate } from "react-router-dom";
 import {toast} from 'react-toastify';
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 
 
 const Signup = () => {
+  const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -21,9 +23,22 @@ const Signup = () => {
           toast.warning("Your password and confirm password do not match!")
             }else {
               try{
-                const data = await axios.post("http://localhost:8000/signUp", formData);
+                const data = await axios.post("http://localhost:8000/api/newUser", formData);
                 //Toast message after successfully submitted
-                toast.success("SignUp successfully");
+                toast.success('Signup Successfully', {
+                  position: "bottom-center",
+                  autoClose: 2000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "dark",
+                  });
+                
+                setTimeout(()=>{
+                },4000)
+                navigate('/');
               }catch(err){
                 console.log(err)
               }

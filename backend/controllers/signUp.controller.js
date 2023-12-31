@@ -1,10 +1,10 @@
-const SignUp = require("../models/signUp.model");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
+import SignUp from "../models/signUp.model.js";
+import bcrypt from "bcryptjs";
+import jwt from  "jsonwebtoken";
 const SECRET_KEY = "this-is-a-secret-key";
 
 //the signUp controller to post the new user data on the database
-exports.store=async(req, res)=>{
+export const createNewUser =async(req, res)=>{
     try{
         const payload = req.body;
         const saltRounds = 10;
@@ -19,7 +19,7 @@ exports.store=async(req, res)=>{
 
 // Login authenticatiion 
 
-exports.login = async (req, res) =>{
+export const loginUser = async (req, res) =>{
     try{
         const {email, password} = req.body;
         console.log(email)
@@ -32,7 +32,7 @@ exports.login = async (req, res) =>{
                     return res.json({err});
                 }else if(result){
                     const payload = {userId:findUser._id, email:findUser.email};
-                    jwt.sign(payload, SECRET_KEY, {expiresIn:1500},(err, result)=>{
+                    jwt.sign(payload, SECRET_KEY, {expiresIn:500},(err, result)=>{
                         if(err){
                             return res.json({err})
                         }else {

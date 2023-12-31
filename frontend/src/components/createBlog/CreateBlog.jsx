@@ -1,9 +1,11 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios';
-import { toast } from 'react-toastify';
+import {toast} from 'react-toastify';
 import JoditEditor from 'jodit-react';
+import css from './CreateBlog.css'
 
-const AddNewBlog = () => {
+
+const CreateBlog = () => {
   const initialFormData = {
     title: '',
     content: '',
@@ -73,10 +75,8 @@ const AddNewBlog = () => {
         buttons: 'bold,italic,fontsize,heading,color',
       };
       
-
-    
-      return (
-        <div className="container mt-5">
+  return (
+    <div className="container mt-5">
           <div className="card w-60 mx-auto">
             <div className="card-header text-center">
               <h3>Upload New Blog</h3>
@@ -101,7 +101,6 @@ const AddNewBlog = () => {
                 <label>
         Content:
         <JoditEditor
-        style={{width:"100"}}
           value={formData.content}
           onChange={handleEditorChange}
           config={editorConfig}
@@ -159,7 +158,7 @@ const AddNewBlog = () => {
           </div>
         </div>
 
-              );
+  )
 }
 
-export default AddNewBlog
+export default CreateBlog
