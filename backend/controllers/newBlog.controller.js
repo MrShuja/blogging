@@ -60,3 +60,19 @@ export const deleteBlog=async(req,res)=>{
     }
     
     }
+    // latest blogs only display the 6 latest blog
+
+    export const getLatestBlogs = async (req, res) => {
+        try {
+          const latestBlogs = await BlogModel.find({})
+            .sort({ createdAt: -1 })
+            .limit(6);
+      
+          console.log('Latest Blogs:', latestBlogs);
+      
+          res.json(latestBlogs);
+        } catch (error) {
+          console.error(error);
+          res.status(500).json({ error: 'Internal Server Error' });
+        }
+      };

@@ -19,11 +19,11 @@ const Login = () => {
     const onSubmit=async(e)=>{
     e.preventDefault();
     try{
-      const data = await axios.post("http://localhost:8000/signup/login",formData)
+      const data = await axios.post("http://localhost:8000/api/newUser/login",formData)
       const accessToken=localStorage.setItem("accessToken",data.data.token)
       const token = localStorage.getItem("accessToken")
       if(token){
-        navigate("/dashboard")
+        navigate("/userDashboard")
         toast.success("wecome, You are Login to your Dashboard")
       }
       console.log(data)
@@ -31,6 +31,19 @@ const Login = () => {
     }
     catch(err){
       console.log(err)
+      toast.warning('Login Fail', {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+      
+      setTimeout(()=>{
+      },4000)
     }
     
     setFormData({
@@ -38,19 +51,6 @@ const Login = () => {
       password:""
     })
     
-    toast.success('Login Successfully', {
-      position: "bottom-center",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      });
-    
-    setTimeout(()=>{
-    },4000)
     
     }
     const {email,password}=formData;

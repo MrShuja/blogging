@@ -2,9 +2,11 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
 import Footer from "../Footer/Footer";
+import Spin from "../loader/Spin";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
+  const [loader,setLoader]=useState(true)
 
   useEffect(() => {
     // Fetch blogs from your backend API
@@ -15,6 +17,7 @@ const Blog = () => {
       } catch (error) {
         console.error("Error fetching blogs:", error);
       }
+      setLoader(false);
     };
 
     fetchBlogs();
@@ -24,6 +27,7 @@ const Blog = () => {
    <div className="container-fluid mt-5">
      <div className="container">
       <div className="row">
+      {loader ? <Spin/> :null}
         {blogs.map((blog) => (
           <div key={blog._id} className="col-md-4 mb-4">
             <div className="card">
