@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { json } from "react-router-dom";
 import {toast} from 'react-toastify';
 import axios from "axios";
-
+// import style from './Signup.css'
 
 const Signup = () => {
     const [formData, setFormData] = useState({
@@ -114,7 +114,7 @@ const Signup = () => {
           )} */}
         </div>
 
-              <button className="btn btn-primary">Submit</button>
+              <button className="btn ">Submit</button>
             </form>
           </div>
         </div>
