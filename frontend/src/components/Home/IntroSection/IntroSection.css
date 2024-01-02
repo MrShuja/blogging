@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
 }
@@ -28,7 +28,7 @@
 }
 .subscribe-section{
     margin-top: 90px;
-    margin-right: 6%;
+    margin-right: 3%;
     border: 1px solid gray;
    height: 300px;
    border-radius: 7%;
@@ -52,7 +52,7 @@
 button{
     margin-top: 5%;
     width: 300px;
-   
+  
     background-color: black;
 }
 .btn{
@@ -60,6 +60,110 @@ button{
     color: white;
     font-weight: bold;
     border-radius: 10px;
+    
 }
 
+
+ */
+ * {
+    margin: 0;
+    padding: 0;
+}
+
+.intro {
+    padding: 10px;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Stack items on top of each other on small screens */
+}
+
+.text h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 35px;
+    text-decoration: underline;
+}
+
+.text {
+    width: 100%; /* Take full width on small screens */
+    margin-top: 20px;
+    margin-bottom: 5%;
+    font-weight: 300;
+    margin-left: 6%;
+}
+
+.subscribe-section {
+    margin-top: 30px;
+    margin-right: 3%;
+    border: 1px solid rgb(0, 0, 0);
+    height: auto; /* Adjust height for small screens */
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Take full width on small screens */
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.subscribe-section h3 {
+    margin-top: 20px;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.subscribe-section p {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+button {
+    margin-top: 5%;
+    width: 100%; /* Take full width on small screens */
+    background-color: black;
+}
+
+.btn {
+    background-color: #4f1340;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    border-radius: 30px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 992px) {
+    .text {
+        width: 70%; /* Adjust width for medium screens */
+    }
+
+    .subscribe-section {
+        max-width: 400px; /* Adjust max-width for medium screens */
+    }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 993px) {
+    .intro {
+        padding: 20px; /* Increase padding for large screens */
+    }
+
+    .text {
+        width: 60%; /* Adjust width for large screens */
+    }
+
+    .subscribe-section {
+        max-width: 600px; /* Adjust max-width for large screens */
+    }
+}
 

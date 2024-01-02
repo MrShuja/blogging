@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
-
+// import style from './Login.css'
 // this the command 
 const Login = () => {
     const [formData,setFormData]=useState({
@@ -56,7 +56,8 @@ const Login = () => {
     const {email,password}=formData;
   //  changes by malaika
   return (
-    <div className="container mt-5">
+    // <div className="container mt-5">
+    <div className="col-lg-6 col-md-8 mx-auto mt-5">
     <h2 className="mb-4">Sign In</h2>
     <form onSubmit={onSubmit}>
       <div className="mb-3">

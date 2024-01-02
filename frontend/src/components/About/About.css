@@ -1,17 +1,189 @@
-/* styles.css */
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Josenfin sans', sans-serif;
+  box-sizing:border-box;
+}
+.About-section{
+  width: 100%;
+  padding: 78px 0px;
+  background-color: white;
+}
+.About-section img{
+  height: auto;
+  width: 420px;
+  border-radius: 20px;
+  margin-left: 20px;
+}
 
-.about-us-container {
-    background: radial-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)), url('https://wallpaperboat.com/wp-content/uploads/2019/10/free-website-background-07.jpg') center/cover no-repeat;
-    padding: 80px 0;
-  }
+.main{
+
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.About-section h1{
+  color: black;
+  font-size: 60px;
+  margin-left: 50px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+ 
   
-  .section-heading {
-    font-size: 3rem;
-    color: #007bff;
-  }
+ 
+
+}
+.About-section h5{
+  color: black;
+  font-size: 25px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  margin-left: 50px;
+  font-weight: bold;
   
-  .text-muted {
-    font-size: 1.2rem;
-    color: #333;
+}
+span{
+  color: #4f1340;
+  font-weight: bold;
+}
+.About-section p{
+  color: black;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 45px;
+  margin-left: 50px;
+
+}
+button{
+  background-color:#4f1340;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: .4s;
+  max-width: 200px;
+  /* margin-left: 20px; */
+ 
+}
+
+button:hover{
+
+  background: black;
+  border: 2px solid black;
+  cursor: pointer;
+  
+
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Josenfin sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.About-section {
+  width: 100%;
+  padding: 78px 0px;
+  background-color: white;
+}
+
+.About-section img {
+  height: auto;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  margin: 0 auto; /* Center image on small screens */
+}
+
+.main {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column; /* Stack items on top of each other on small screens */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.About-section h1 {
+  color: black;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.About-section h5 {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+span {
+  color: #4f1340;
+  font-weight: bold;
+}
+
+.About-section p {
+  color: black;
+  letter-spacing: 1px;
+  line-height: 24px;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #4f1340;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: 0.4s;
+}
+
+button:hover {
+  background: transparent;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  .About-section img {
+    margin-bottom: 20px;
   }
+
+  .About-section h1 {
+    font-size: 30px;
+  }
+
+  .About-section h5 {
+    font-size: 16px;
+  }
+
+  .About-section p {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 992px) {
+  .main {
+    flex-direction: row; /* Revert to horizontal layout for medium screens */
+  }
+}
+
+
   
