@@ -1,4 +1,7 @@
 import React from 'react'
+import style from './About.css'
+import Footer from '../Footer/Footer';
+import Subscribe from '../subscribe/Subscribe';
 import  './About.css'
 
 function About() {
@@ -18,6 +21,11 @@ function About() {
             <button type='button'>Let's Talk</button>
             </div>
         </div>
+        <Subscribe />
+        <Footer />
+        </>
+      );
+=======
         </section>
     
         
@@ -25,6 +33,7 @@ function About() {
 
     
   )
+
 }
 
 export default About
