@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const signUpSchema=mongoose.Schema({
     name:{
@@ -16,4 +16,5 @@ const signUpSchema=mongoose.Schema({
         default:""
     }
 }, {timestamps:true} )
-module.exports=mongoose.model("signUp", signUpSchema)
+const signupModel = mongoose.model("users", signUpSchema)
+export default signupModel;

@@ -12,6 +12,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './components/Userdashboard/Dashboard';
 import Blog from './components/blog/BlogList';
 import BlogDetail from './components/blogDetails/BlogDetail';
+import CreateBlog from './components/createBlog/CreateBlog';
+import LoginAuthentication from './components/loginAuthentication/LoginAuth';
+import LoginAuth from './components/loginAuthentication/LoginAuth';
+import UserDashboard from './components/users/UserDashboard';
 
 function App() {
   return (
@@ -25,7 +29,7 @@ function App() {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/login' element={<Login/>}/>
-      <Route path='/dashboard' element={<Dashboard/>}/>
+      <Route path='/userDashboard' element={<UserDashboard/>}/>
     </Routes>
     <ToastContainer />
    </>

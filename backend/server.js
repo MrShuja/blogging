@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
+import Signup from './routes/signUp.route.js';
 import NewBlog from "./routes/blog.route.js";
 import dotenv from 'dotenv'
 import cors from 'cors';
@@ -21,6 +22,7 @@ const password = process.env.PASSWORD;
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json());
 app.use(cors("*"))
+app.use("/api", Signup)
 // to add new blog
 app.use("/api", NewBlog)
 app.use('/upload', express.static(path.join(__dirname, 'upload')));

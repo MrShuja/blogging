@@ -4,6 +4,7 @@ import About from "../About/About";
 import { Link } from "react-router-dom";
 import style from "./Header.css";
 
+
 const Header = () => {
   return (
     <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
@@ -38,7 +39,7 @@ const Header = () => {
                 BLOGS
               </Link>
             </li>
-            <li class="nav-item dropdown">
+            {/* <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
@@ -113,14 +114,14 @@ const Header = () => {
                   IT Certifications and Training
                   </a>
                 </li>
-                {/* <li><hr class="dropdown-divider"></li> */}
+                <li><hr class="dropdown-divider"></li>
                 <li>
                   <a class="dropdown-item" href="#">
                     ------------------
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> */}
             <li class="nav-item">
                   <Link class="nav-link " to="/about">
                     ABOUT US
@@ -135,7 +136,7 @@ const Header = () => {
           <ul class="d-flex navbar-nav  mb-2 mb-lg-0 mr-0 gap-3">
             <li class="nav-item">
               <Link class="nav-link " to="/login">
-                SIGN_IN
+                Login
               </Link>
             </li>
             <li>
