@@ -1,6 +1,7 @@
 import React from 'react'
 import style from './About.css'
 import Footer from '../Footer/Footer';
+import Subscribe from '../subscribe/Subscribe';
 
 const About = () => {
     return (
@@ -28,6 +29,7 @@ const About = () => {
             </div>
             
         </div>
+        <Subscribe />
         <Footer />
         </>
       );

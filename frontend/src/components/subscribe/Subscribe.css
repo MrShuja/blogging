@@ -1,0 +1,32 @@
+.subscribe-container {
+    width: 30%;
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid #3498db; /* Border color can be adjusted */
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 767px) {
+    .subscribe-container {
+      width: 70%;
+    }
+  }
+  
+  .subscribe-content {
+    margin-top: 15px;
+  }
+  
+  .subscribe-content input,
+  .subscribe-content button {
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .subscribe-content button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

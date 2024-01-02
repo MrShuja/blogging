@@ -27,6 +27,10 @@ const LatestBlogs = () => {
        <div className="">
         <div className="row">
         {loader ? <Spin/> :null}
+        <div>
+          <h1>The latest Blogs</h1>
+          <hr></hr>
+        </div>
           {blogs.map((blog) => (
             <div key={blog._id} className="col-md-4 mb-4">
               <div className="card">
