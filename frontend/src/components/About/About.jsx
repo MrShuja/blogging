@@ -23,16 +23,9 @@ function About() {
         </div>
         <Subscribe />
         <Footer />
-        </>
-      );
-=======
         </section>
-    
-        
+      );
 
-
-    
-  )
 
 }
 

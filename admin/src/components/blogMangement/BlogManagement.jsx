@@ -3,38 +3,46 @@ import axios from 'axios';
 
 const BlogManagement = () => {
   const [blogData, setBlogData] = useState([]);
-  
 
-    // Fetch blogs from your backend API
-    const fetchBlogs = async () => {
+  //  blogs Fetching from backend API
+  const fetchBlogs = async () => {
+    try {
+      const response = await axios.get("http://localhost:8000/api/blogs");
+      setBlogData(response.data);
+    } catch (error) {
+      console.error("Error fetching blogs:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
+
+  const handleDelete = async (id) => {
+    const confirmDelete = window.confirm("Are you sure you want to delete this blog post?");
+    
+    if (confirmDelete) {
       try {
-        const response = await axios.get("http://localhost:8000/api/blogs"); // Replace with your actual API endpoint
-        setBlogData(response.data);
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
-      }
-    };
+        const response = await axios.delete(`http://localhost:8000/api/blogs/${id}`);
+        console.log(response);
 
-   
-    useEffect( ()=>{
-        fetchBlogs();
-    }, []);
-
-    const handleDelete=async(id)=>{
-        try{
-          const response = await axios.delete(`http://localhost:8000/api/blogs/${id}`);
+        if (response.status === 200) {
+          // Blog deleted successfully, fetch updated blogs
           fetchBlogs();
-          console.log(response);
+        } else {
+          console.log('Blog deletion failed.');
         }
-        catch(err){
-              console.log(err)
-        }
-        
+      } catch (err) {
+        console.log(err);
       }
+    }
+  };
 
   const handleUpdate = (id) => {
-    // Implement the update functionality using Axios
+    // Implement the update functionality here
     // You may navigate to a separate update page or use a modal
+    // history.push(`/update-blog/${id}`);
+    console.log(`Update blog with ID: ${id}`);
   };
 
   return (
@@ -56,13 +64,13 @@ const BlogManagement = () => {
             <tr key={blog._id}>
               <td>{index + 1}</td>
               <td>{blog.title}</td>
-              <td>{blog.image}</td> {/* Consider this as text data */}
-              <td>{"content"}</td>
+              <td>{blog.image}</td>
+              <td>{blog.content}</td>
               <td>{blog.category}</td>
               <td>
                 <button
                   className="btn btn-danger btn-sm mr-2"
-                  onClick={()=>handleDelete(blog._id)}
+                  onClick={() => handleDelete(blog._id)}
                 >
                   Delete
                 </button>
@@ -82,4 +90,3 @@ const BlogManagement = () => {
 };
 
 export default BlogManagement;
-
