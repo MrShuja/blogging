@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import UpdateBlog from '../updateBlog/UpdateBlog';
 
 const BlogManagement = () => {
   const [blogData, setBlogData] = useState([]);
+  const [selectedBlogId, setSelectedBlogId] = useState(null);
+  const [isUpdateModalOpen, setUpdateModalOpen] = useState(false);
   
 
     // Fetch blogs from your backend API
@@ -20,21 +23,25 @@ const BlogManagement = () => {
         fetchBlogs();
     }, []);
 
-    const handleDelete=async(id)=>{
-        try{
-          const response = await axios.delete(`http://localhost:8000/api/blogs/${id}`);
+    const handleDelete = async (id) => {
+      try {
+          const response = await axios.delete(`http://localhost:8000/api/${id}`);
+          console.log(response.status);
           fetchBlogs();
           console.log(response);
-        }
-        catch(err){
-              console.log(err)
-        }
-        
+      } catch (err) {
+          console.error(err);
       }
+  };
 
   const handleUpdate = (id) => {
-    // Implement the update functionality using Axios
-    // You may navigate to a separate update page or use a modal
+    setSelectedBlogId(id);
+    setUpdateModalOpen(true);
+  };
+
+  const handleCloseUpdateModal = () => {
+    setUpdateModalOpen(false);
+    setSelectedBlogId(null);
   };
 
   return (
@@ -77,6 +84,17 @@ const BlogManagement = () => {
           ))}
         </tbody>
       </table>
+      <div className="container mt-4">
+      {/* ... Existing code ... */}
+
+      {isUpdateModalOpen && (
+        <UpdateBlog
+          blogId={selectedBlogId}
+          onClose={handleCloseUpdateModal}
+          onUpdate={fetchBlogs}
+        />
+      )}
+    </div>
     </div>
   );
 };

@@ -25,7 +25,7 @@ const IntroSection = () => {
         competition, look no further than nuVision. Contact us today to learn more about our<br />
         comprehensive software development services and how we can help take your<br />
         businessto the next level.</p></div>
-        <div className='subscribe-section'>
+        {/* <div className='subscribe-section'>
             <h3>Subscribe Now</h3>
             <p>No Spam. Just the latest releases <br />
             and tips, interesting articles,and<br />
@@ -38,7 +38,7 @@ const IntroSection = () => {
   </div>
   <div class="mx-5 col-sm-10">
   <button type="submit" class="btn">Submit</button></div>
-        </div>
+        </div> */}
         </div>
         
   )
