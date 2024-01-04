@@ -22,12 +22,20 @@ function About() {
             <button className='talk-btn' type='button'>Let's Talk</button>
             </div>
         </div>
+
         
      </section>
      <Subscribe />
         <Footer />
      </>
   )
+
+        <Subscribe />
+        <Footer />
+        </section>
+      );
+
+
 
 }
 
