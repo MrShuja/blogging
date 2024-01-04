@@ -12,7 +12,7 @@
 .About-section img{
   height: auto;
   width: 420px;
-  border-radius: 20px;
+  border-radius:  20px;
   margin-left: 20px;
 }
 
@@ -76,6 +76,7 @@ button:hover{
   background: black;
   border: 2px solid black;
   cursor: pointer;
+  color: aliceblue;
   
 
 }
@@ -136,7 +137,7 @@ span {
   margin-bottom: 30px;
 }
 
-button {
+.talk-btn {
   background-color: #4f1340;
   color: white;
   text-decoration: none;
@@ -147,10 +148,10 @@ button {
   transition: 0.4s;
 }
 
-button:hover {
-  background: transparent;
+talk-btn:hover {
   border: 2px solid black;
   cursor: pointer;
+  color:aliceblue;
 }
 
 /* Media Queries for Responsive Design */

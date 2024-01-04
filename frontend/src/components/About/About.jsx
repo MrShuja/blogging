@@ -8,6 +8,7 @@ function About() {
 
    
   return (
+    <>
     <section className="About-section">
         <div className="main">
         <img src={`${process.env.PUBLIC_URL}/assets/web.jpg`} alt="John Smith"/>
@@ -18,13 +19,22 @@ function About() {
             Voluptatibus amet blanditiis vel dolores ad, omnis, esse,
             asperiores corrupti reprehenderit ipsa qui adipisci dicta
             quasi earum! Ab dicta ea labore iusto!</p>
-            <button type='button'>Let's Talk</button>
+            <button className='talk-btn' type='button'>Let's Talk</button>
             </div>
         </div>
+
+        
+     </section>
+     <Subscribe />
+        <Footer />
+     </>
+  )
+
         <Subscribe />
         <Footer />
         </section>
       );
+
 
 
 }

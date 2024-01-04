@@ -5,6 +5,7 @@ import NewPost from './NewPost/NewPost';
 import IntroSection from './IntroSection/IntroSection';
 import LatestBlogs from '../latestBlogs/LatestBlogs';
 import Footer from '../Footer/Footer';
+import Subscribe from '../subscribe/Subscribe'
 
 const Home = () => {
 
@@ -14,6 +15,7 @@ const Home = () => {
       <LatestBlogs />
       <NewPost />
       <IntroSection />
+      <Subscribe />
       <Footer />
      
     </div>

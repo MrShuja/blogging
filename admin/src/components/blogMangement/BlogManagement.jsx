@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import UpdateBlog from '../updateBlog/UpdateBlog';
 
 const BlogManagement = () => {
   const [blogData, setBlogData] = useState([]);
+
+  const [selectedBlogId, setSelectedBlogId] = useState(null);
+  const [isUpdateModalOpen, setUpdateModalOpen] = useState(false);
+  
 
   //  blogs Fetching from backend API
   const fetchBlogs = async () => {
@@ -26,6 +31,27 @@ const BlogManagement = () => {
         const response = await axios.delete(`http://localhost:8000/api/blogs/${id}`);
         console.log(response);
 
+
+    const handleDelete = async (id) => {
+      try {
+          const response = await axios.delete(`http://localhost:8000/api/${id}`);
+          console.log(response.status);
+          fetchBlogs();
+          console.log(response);
+      } catch (err) {
+          console.error(err);
+      }
+  };
+
+  const handleUpdate = (id) => {
+    setSelectedBlogId(id);
+    setUpdateModalOpen(true);
+  };
+
+  const handleCloseUpdateModal = () => {
+    setUpdateModalOpen(false);
+    setSelectedBlogId(null);
+
         if (response.status === 200) {
           // Blog deleted successfully, fetch updated blogs
           fetchBlogs();
@@ -43,6 +69,7 @@ const BlogManagement = () => {
     // You may navigate to a separate update page or use a modal
     // history.push(`/update-blog/${id}`);
     console.log(`Update blog with ID: ${id}`);
+
   };
 
   return (
@@ -85,6 +112,17 @@ const BlogManagement = () => {
           ))}
         </tbody>
       </table>
+      <div className="container mt-4">
+      {/* ... Existing code ... */}
+
+      {isUpdateModalOpen && (
+        <UpdateBlog
+          blogId={selectedBlogId}
+          onClose={handleCloseUpdateModal}
+          onUpdate={fetchBlogs}
+        />
+      )}
+    </div>
     </div>
   );
 };

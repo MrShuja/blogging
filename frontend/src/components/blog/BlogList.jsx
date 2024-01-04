@@ -45,7 +45,7 @@ const Blog = () => {
                   className="card-text"
                   style={{ maxHeight: "7.2em", overflow: "hidden" }}
                 >
-                  {blog.content}
+                  <div dangerouslySetInnerHTML={{ __html: blog.content }} />
                 </p>
                 <Link to={`/blog/${blog._id}`} className="btn btn-primary">
                   Read More
